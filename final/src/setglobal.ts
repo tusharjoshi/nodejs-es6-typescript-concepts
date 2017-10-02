@@ -1,0 +1,1 @@
+global.myConfig = "Some Value";
