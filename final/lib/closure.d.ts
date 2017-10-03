@@ -3,4 +3,3 @@ declare let counter: {
     increment: () => void;
     decrement: () => void;
 };
-declare let index: number;
