@@ -8,7 +8,7 @@
     "start": "npm run build:live",
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
     "build": "node_modules/typescript/bin/tsc -w",
-    "test:watch": "jasmine-node lib --autotest",
+    "test:watch": "jasmine-node lib --autotest --junitreport",
     "test": "npm-run-all -p 'build' 'test:watch'"
   },
   "author": "Tushar Joshi",
