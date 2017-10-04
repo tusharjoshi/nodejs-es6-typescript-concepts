@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-es6-typsescript-concepts",
+  "version": "1.0.0",
+  "description": "NodeJS ES6 TypeScript Concepts",
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
+    "build": "node_modules/typescript/bin/tsc -w",
+    "test:watch": "jasmine-node lib --autotest  --junitreport",
+    "test": "npm-run-all -p 'build' 'test:watch'"
+  },
+  "author": "Tushar Joshi",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jasmine": "^2.6.0",
+    "@types/node": "^8.0.32",
+    "jasmine": "^2.8.0",
+    "jasmine-node": "^1.14.5",
+    "nodemon": "^1.12.1",
+    "npm-run-all": "^4.1.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "@types/emojione": "^2.2.2",
+    "emojione": "^3.1.2"
+  }
+}
