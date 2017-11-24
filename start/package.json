@@ -7,9 +7,9 @@
   "scripts": {
     "start": "npm run build:live",
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
-    "build": "node_modules/typescript/bin/tsc -w",
+    "build": "node ./node_modules/typescript/lib/tsc.js -w",
     "test:watch": "jasmine-node lib --autotest  --junitreport",
-    "test": "npm-run-all -p 'build' 'test:watch'"
+    "test": "node ./node_modules/npm-run-all/bin/npm-run-all -p build test:watch"
   },
   "author": "Tushar Joshi",
   "license": "MIT",
